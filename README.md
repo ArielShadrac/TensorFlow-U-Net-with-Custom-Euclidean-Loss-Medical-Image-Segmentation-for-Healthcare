@@ -10,7 +10,7 @@ La perte de distance euclidienne (souvent implémentée comme MSE, Mean Squared 
 
 L'implémentation d'U-Net en TensorFlow repose sur des couches convolutives personnalisées et une perte euclidienne custom pour une différentiation end-to-end. Cela permet un entraînement via backpropagation, scalable sur GPU via Keras. Un U-Net basique inclut un encodeur (MaxPooling pour downsampling), un goulot d'étranglement, et un décodeur (UpSampling pour upsampling), avec une perte MSE pour pénaliser les écarts pixeliels.
 
-Les considérations clés incluent la normalisation des entrées (ex. : Min-Max pour IRM), la gestion des formes (ex. : 64x64x1 pour images 2D), et une régularisation L2 pour éviter l'overfitting sur datasets cliniques rares. Le code fourni (détaillé dans le fichier `main.py` ou notebook joint) démontre un U-Net simple pour la segmentation de masques sur données IRM simulées, utilisant l'optimiseur Adam et une perte euclidienne from scratch. Pour des extensions avancées, intégrez des B-spline pour la perte ou des couches convolutives 3D pour des volumes IRM.
+Les considérations clés incluent la normalisation des entrées (ex. : Min-Max pour IRM), la gestion des formes (ex. : 64x64x1 pour images 2D), et une régularisation L2 pour éviter l'overfitting sur datasets cliniques rares. Le code fourni (détaillé dans le fichier `main.py`) démontre un U-Net simple pour la segmentation de masques sur données IRM simulées, utilisant l'optimiseur Adam et une perte euclidienne from scratch. Pour des extensions avancées, intégrez des B-spline pour la perte ou des couches convolutives 3D pour des volumes IRM.
 
 ## Utilisation dans les Projets de Santé
 
